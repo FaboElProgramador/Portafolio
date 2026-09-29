@@ -1071,50 +1071,6 @@ section.title {
     color: var(--ink-soft);
 }
 
-.title__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 22px;
-}
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 11px 18px;
-    border: 1px solid transparent;
-    border-radius: 999px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
-.button--primary {
-    background: var(--secondary-color);
-    color: #ffffff;
-}
-
-.button--primary:hover {
-    background: #ff3a50;
-}
-
-.button--secondary {
-    border-color: rgba(255, 255, 255, 0.35);
-    color: #edf6fc;
-}
-
-.button--secondary:hover {
-    border-color: #ffd166;
-    color: #ffd166;
-}
-
 section.about,
 section.academic,
 section.certificates,
@@ -1184,20 +1140,9 @@ section.formcontato {
     border-color: rgba(255, 209, 102, 0.55);
 }
 
-@media (max-width: 520px) {
-    .title__actions {
-        width: 100%;
-    }
-
-    .button {
-        flex: 1 1 150px;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .js .reveal,
     .js .reveal.is-visible,
-    .button,
     .skills__box,
     .hobbies__box,
     .academic__courses__box,
