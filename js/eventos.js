@@ -10,6 +10,16 @@ enlaces.forEach((enlace) => {
     enlace.addEventListener('click', abrirEnlaceExterno);
 });
 
+const botonesCertificados = document.querySelectorAll('.certificate__button');
+
+botonesCertificados.forEach((boton) => {
+    boton.addEventListener('click', () => {
+        boton.dataset.certificates.split('|').forEach((certificado) => {
+            window.open(certificado, '_blank');
+        });
+    });
+});
+
 const elementosAnimados = document.querySelectorAll(
     'section:not(.menu), .skills__box, .hobbies__box, .academic__courses__box, .certificate__card, .experiencie__box'
 );
