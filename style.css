@@ -940,3 +940,99 @@ section.footer {
 .formcontato__textarea::placeholder {
     color: #a9c0d2;
 }
+
+.certificates {
+    padding: clamp(32px, 5vw, 72px) clamp(18px, 4vw, 56px);
+    background: var(--surface-muted);
+    color: #edf6fc;
+}
+
+.certificates__header {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.section__eyebrow {
+    margin: 0 0 8px;
+    color: #ffd166;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.certificates__title {
+    margin: 0 0 12px;
+    color: #edf6fc;
+}
+
+.certificates__intro {
+    margin: 0;
+    color: #c7d9e8;
+}
+
+.certificates__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.certificate__card {
+    display: flex;
+    min-height: 190px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--surface-color);
+    box-shadow: 0 8px 24px rgba(0, 8, 22, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificate__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.certificate__card h3 {
+    margin: 0;
+    color: #edf6fc;
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+
+.certificate__card p {
+    flex: 1;
+    margin: 0;
+    color: #c7d9e8;
+}
+
+.certificate__card a {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: var(--secondary-color);
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.certificate__card a:hover {
+    background: #ff3a50;
+}
+
+@media (max-width: 800px) {
+    .certificates__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .certificates__grid {
+        grid-template-columns: 1fr;
+    }
+}
