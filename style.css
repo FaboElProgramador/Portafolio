@@ -1037,6 +1037,166 @@ section.footer {
     }
 }
 
+/* Capa visual y movimiento de la versión moderna */
+:root {
+    --ink-soft: #c7d9e8;
+    --line-soft: rgba(203, 229, 247, 0.14);
+    --surface-deep: #071d31;
+}
+
+body {
+    background:
+        radial-gradient(circle at 12% 8%, rgba(255, 76, 96, 0.12), transparent 28rem),
+        linear-gradient(145deg, #061a2c 0%, #00295f 52%, #123957 100%);
+}
+
+section.title {
+    min-height: 520px;
+    padding-top: clamp(56px, 8vw, 108px);
+    padding-bottom: clamp(56px, 8vw, 108px);
+}
+
+.title__subsection {
+    color: var(--ink-soft);
+}
+
+.title__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 11px 18px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.button--primary {
+    background: var(--secondary-color);
+    color: #ffffff;
+}
+
+.button--primary:hover {
+    background: #ff3a50;
+}
+
+.button--secondary {
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #edf6fc;
+}
+
+.button--secondary:hover {
+    border-color: #ffd166;
+    color: #ffd166;
+}
+
+section.about,
+section.academic,
+section.certificates,
+section.footer {
+    border-top: 1px solid var(--line-soft);
+}
+
+section.skills,
+section.hobbies,
+section.experience,
+section.formcontato {
+    background: linear-gradient(180deg, rgba(7, 29, 49, 0.18), rgba(18, 57, 87, 0.34));
+    border-top: 1px solid var(--line-soft);
+}
+
+.menu__list__item a {
+    position: relative;
+    padding: 8px 0;
+}
+
+.menu__list__item a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #ffd166;
+    content: '';
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.menu__list__item a:hover::after,
+.menu__list__item a.is-active::after {
+    transform: scaleX(1);
+}
+
+.menu__list__item a.is-active {
+    color: #ffd166;
+}
+
+.js .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.js .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills__box,
+.hobbies__box,
+.academic__courses__box,
+.certificate__card,
+.experiencie__box {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.skills__box:hover,
+.hobbies__box:hover,
+.academic__courses__box:hover,
+.certificate__card:hover,
+.experiencie__box:hover {
+    border-color: rgba(255, 209, 102, 0.55);
+}
+
+@media (max-width: 520px) {
+    .title__actions {
+        width: 100%;
+    }
+
+    .button {
+        flex: 1 1 150px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .reveal,
+    .js .reveal.is-visible,
+    .button,
+    .skills__box,
+    .hobbies__box,
+    .academic__courses__box,
+    .certificate__card,
+    .experiencie__box {
+        transform: none;
+        transition: none;
+    }
+}
+
 .certificate__category + .certificate__category {
     margin-top: 42px;
 }
