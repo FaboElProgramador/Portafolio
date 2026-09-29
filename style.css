@@ -82,6 +82,17 @@ section.menu {
     margin-right: 60px;
 }
 
+.menu__brand {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu__brand:hover {
+    text-decoration: none;
+}
+
 .menu__list {
     display: flex;
     margin-right: 100px;
