@@ -1171,3 +1171,55 @@ section.formcontato {
     font-size: 1.05rem;
     line-height: 1.35;
 }
+
+/* Ritmo visual entre secciones */
+section.about,
+section.skills,
+section.hobbies,
+section.academic,
+section.certificates,
+section.experience,
+section.formcontato,
+section.footer {
+    margin: 0;
+    padding-block: clamp(64px, 8vw, 112px);
+    border-top: 1px solid rgba(203, 229, 247, 0.12);
+}
+
+section.about {
+    background: linear-gradient(135deg, #0b2945 0%, #123957 100%);
+}
+
+section.skills,
+section.academic {
+    background: #071d31;
+}
+
+section.hobbies,
+section.certificates {
+    background: linear-gradient(135deg, #123957 0%, #0b2945 100%);
+}
+
+section.experience {
+    background: linear-gradient(160deg, #061a2c 0%, #00295f 100%);
+}
+
+section.formcontato {
+    background: #071d31;
+}
+
+section.footer {
+    background: #061522;
+}
+
+section.academic .academic__courses__box {
+    border-top: 3px solid #ffd166;
+}
+
+section.experience .experiencie__box {
+    border-top: 3px solid var(--secondary-color);
+}
+
+section.certificates .certificate__card {
+    border-top: 3px solid rgba(203, 229, 247, 0.4);
+}
