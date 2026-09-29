@@ -998,16 +998,6 @@ section.footer {
     box-shadow: var(--shadow);
 }
 
-.certificate__icon {
-    align-self: flex-end;
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-    padding: 7px;
-    border-radius: 10px;
-    background: rgba(237, 246, 252, 0.1);
-}
-
 .certificate__card h3 {
     margin: 0;
     color: #edf6fc;
