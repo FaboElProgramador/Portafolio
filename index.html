@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Fabian Vazquez, desarrollador frontend especializado en experiencias web accesibles y responsive.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +45,7 @@
                         <li class="title__network__item"><a href="https://github.com/FaboElProgramador">Github</a></li>
                         <li class="title__network__item"><a href="https://www.linkedin.com/in/fabian-vazquez-bb9b2628b/">Linkedin</a></li>
                         <li class="title__network__item"><a href="https://www.instagram.com/">Instagram</a></li>
-                        <li class="title__network__item"><a href="https://drive.google.com/file/d/1rpXsFKnH5C9B4HZbVl-fOGsCHAncx4Ih/view?usp=drive_link">Currículo</a></li>
+                        <li class="title__network__item"><a href="assets/cv_fabi.jpg" target="_blank" rel="noopener noreferrer">Currículo</a></li>
                     </ul>
                 </div>
                 <img class="title__profile" src="assets/Foto cv.png" alt="Foto de Fabian Vazquez">
@@ -343,12 +344,12 @@
                     <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted
                         lo antes posible. </h3>
-                    <form class="formcontato__form" name="form">
-                        <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre" requiered>
-                        <input class="formcontato__input" type="email" name="email" placeholder="E-mail" requiered>
-                        <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto" requiered>
+                    <form class="formcontato__form" name="form" novalidate>
+                        <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre" autocomplete="name" required>
+                        <input class="formcontato__input" type="email" name="email" placeholder="E-mail" autocomplete="email" required>
+                        <input class="formcontato__input" type="text" name="asunto" placeholder="Asunto" required>
                         <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje"
-                            placeholder="Mensaje" requiered></textarea>
+                            placeholder="Mensaje" required></textarea>
                         <button type="submit" class="formcontato__botao">Enviar mensaje</button>
                     </form>
                 </div>
@@ -362,8 +363,8 @@
             </div>
         </section>
     </div>
-    <script src="eventos.js"></script>
-    <script src="validacion.js"></script>
+    <script src="js/eventos.js" defer></script>
+    <script src="js/validacion.js" defer></script>
 </body>
 
 </html>
