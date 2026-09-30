@@ -743,6 +743,16 @@ section.footer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.academic__complementary__title {
+    margin: 36px 0 18px;
+    color: #ffd166;
+    font-size: 1.25rem;
+}
+
+.academic__complementary__courses {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .academic__courses__box {
     margin: 0;
     padding: 18px;
